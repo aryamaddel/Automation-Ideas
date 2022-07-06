@@ -9,8 +9,7 @@ def instagram_login(username, password):
     """
     This function logs into instagram using the username and password provided.
     """
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    
     driver.get("https://www.instagram.com/accounts/login/")
 
     # Wait for the login page to load
@@ -29,5 +28,7 @@ def instagram_login(username, password):
 
 username = input("Enter your username: ")
 password = input("Enter your password: ")
+driver = webdriver.Chrome()
+driver.maximize_window()
 instagram_login(username, password) 
 
